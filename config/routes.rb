@@ -1,4 +1,4 @@
-CasaHogar::Application.routes.do
+CasaHogar::Application.routes do
 	match '/vision'    =>   'Home#vission'
 	match '/mision'    =>   'Home#mission'
 	match '/quienes'   =>   'Home#who'
