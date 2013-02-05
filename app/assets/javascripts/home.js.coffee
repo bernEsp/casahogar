@@ -54,4 +54,3 @@ redrawDotNav =  () ->
 		$('nav.primary a.gallery').addClass('active')
 	
 
-

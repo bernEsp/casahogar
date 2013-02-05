@@ -7,5 +7,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
-//= require home
-//= require_tree .
+//= require parallax/html5
+//= require parallax/side-nav
+//= require parallax/kinectics
+//= require parallax/backgrounds
+//= require parallax/parallax
+

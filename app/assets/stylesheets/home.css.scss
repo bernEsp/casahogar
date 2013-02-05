@@ -7,7 +7,7 @@
 
 html { 
 	overflow-y: scroll; /* always force a scrollbar in non-IE */
-	}
+}
 body {
 	background: #e3e5e5;
 	overflow-x: hidden;
@@ -16,6 +16,10 @@ body {
 	color: #000;
 	font-size: 14px;
 	font-family: Arial,sans-serif;
+	-webkit-transition: scroll 1.25s ease-out;
+	-moz-transition: scroll 1.25s ease-out;
+	-o-transition: scroll 1.25s ease-out;
+	transition: scroll 1.25s ease-out;
 }
 h1 {
 	color: #21a97e;
@@ -40,7 +44,213 @@ img {
 p {
 	margin:1em 0;
 	}
+// Set style to parallax
+// ***************************************************************/
+body {
+	width  : 100%;
+	height : 100%;
+}
 
+body {
+	margin      : 0px;
+	min-width   : 1080px;
+	padding     : 0px;
+	font-family : 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	overflow-x  : hidden;
+}
+
+#content {
+	position : fixed;
+	top      : 0px;
+	left     : 0px;
+	width    : 100%;
+	height   : 100%;
+}
+
+a { 
+	color           : #6C6;
+	text-decoration : none;
+}
+
+a:hover {
+	text-decoration : underline;
+}
+
+p {
+	margin      : 0 0 20px 0;
+	font-size   : 13px;
+	line-height : 24px;
+}
+
+p, ul {
+	font-family      : 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-weight      : 200;
+	font-style       : normal;
+	list-style       : none;
+}
+
+#header ul li {
+	width      : 325px;
+	height     : 50px;
+	float      : left;
+	text-align : center;
+}
+
+#header ul {
+	padding: 0;
+}
+
+img {
+	border: 0;
+}
+
+h1 {
+	font-family      : 'Helvetica Neue', Verdana, serif;
+	font-weight      : bold;
+	font-style       : normal;
+}
+
+h2 {
+	font-family : 'Helvetica Neue', Verdana, sans-serif;
+	font-size   : 30px; 
+	font-weight : bold;
+	line-height : 80px;
+}
+
+h3 {
+	font-family : 'Helvetica Neue', Verdana, sans-serif;
+	font-size   : 16px;
+	font-weight : bold;
+	margin      : 1em 0;
+}
+
+h3.caseStudy {
+	cursor : pointer;
+}
+
+.video {
+	overflow : hidden;
+}
+
+
+section {
+	min-height : 500px;
+	min-height : 100%;
+	width      : 100%;
+	position   : absolute;
+	overflow   : hidden;
+	visibility : hidden;
+}
+
+section .story {
+	position      : relative;
+	z-index       : 1;
+	width         : 500px;
+	padding-right : 450px;
+	margin        : 20px auto 0 auto;
+}
+
+div.caption {
+	padding-bottom : 30px;
+	font-size      : 13px;
+}
+
+/* default section show / hide animations */
+section.start {
+	top : 100%;
+}
+
+section.focus, section.to {
+	bottom : 0%;
+}
+
+section.end {
+	bottom : 100%;
+}
+
+/* default background image animation */
+
+section .bg {
+	position : absolute;
+	left     : 0px;
+	top      : 0%;
+}
+
+section .bg.start {
+	top : -50%;
+}
+
+section .bg, section .bg.focus, section .bg.to {
+	top : 0%;
+}
+
+section .bg.end {
+	top : 50%;
+}
+
+/* Side Nav */
+ul#nav {
+	position : fixed;
+	left     : 5%;
+	top      : 20%;
+	z-index  : 999;
+}
+
+ul#nav li {
+	height   : 20px;
+	position : relative;
+}
+
+ul#nav a {
+	display     : block;
+	width       : 20px;
+	height      : 20px;
+	background  : url('../images/grey-dot.png') 0 100% no-repeat;
+	text-indent : -9000px;
+	overflow    : hidden;
+	outline     : none;
+}
+
+ul#nav a:hover, nav#main li.active a {
+	background : url('../images/grey-pink-dot.png') 0 100% no-repeat;
+}
+
+ul#nav h1 {
+	display     : none;
+	opacity     : 0;
+	position    : absolute;
+	left        : 15px;
+	top         : 0px;
+	white-space : nowrap;
+	padding     : 0 0 0 18px;
+	background  : url('../images/menu-arrow.png') 0 50% no-repeat;
+	overflow    : hidden;
+	margin      : 0;
+	font-size   : 16px;
+}
+
+ul#nav span {
+	display            : block;
+	background         : url('../images/menu-bg.png') repeat-x;
+	color              : #FFF;
+	padding            : 4px 8px;
+	white-space        : nowrap;
+	-moz-border-radius : 10px;
+	border-radius      : 10px;
+}
+
+#fancybox-left #fancybox-left-ico {
+	left : -40px;
+}
+
+#fancybox-right #fancybox-right-ico {
+	left  : auto;
+	right : -40px;
+}
+
+.video-js-box.vjs-fullscreen {
+	height : auto !important;
+}
 // Common shared styles
 //*****************************************************************/
 
@@ -55,227 +265,82 @@ hr {
 //* Page structure
 //*****************************************************************/
 
-.wrapper {
-	position: relative;
-}
 .branding {
 	width: 100%;
 	background: #fff;
-	}
-	.branding h1 {
-		width: 940px;
-		padding: 10px 15px;
-		margin: 0 auto;
-		text-transform: uppercase;
-		font-size: 18px;
-		font-weight: bold;
-		}
+}
+
+.branding h1 {
+	font-size: 24px;
+	font-weight: bold;
+	margin: 0 auto;
+	padding: 10px 15px;
+	text-transform: uppercase;
+	width: 940px;
+}
 
 //* Nav
 //*****************************************************************/
 
-nav.primary {
+.parallax-primary {
 	z-index: 5;
 	position: fixed;
 	top: 50%;
 	right: 16px;
 	margin-top: -40px;
-}
-nav.primary li {
-	position: relative;
-	height: 20px;
-}
-nav.primary a {
-	display: block;
-	width: 20px;
-	height: 20px;
-	text-indent: -9999px;
-	background: transparent url('nav-dot.png') 4px 4px no-repeat;
-}
-nav.primary a:hover, nav.primary a.active {
-	background: transparent url('nav-dot.png') 4px -16px no-repeat;
-}
-nav.primary h4 {
-	position: absolute;
-	right: 22px;
-	top: -7px;
-	display: none;
-	padding: 4px 20px 4px 7px;;
-	color: #fff;
-	white-space: nowrap;
-	background: transparent url('nav-arrow.png') 100% 50% no-repeat;
+
+  li {
+	 	height: 20px;
+		position: relative;
+  }
+  a {
+		background: transparent url('nav-dot.png') 4px 4px no-repeat;
+	 	display: block;
+	 	height: 20px;
+	 	text-indent: -9999px;
+	 	width: 20px;
+		&:hover, &.active{
+			background: transparent url('nav-dot.png') 4px -16px no-repeat;
+		}
 	}
-nav.next-prev {
-	margin: 20px 0 0 0;
+
+	h4 {
+		position: absolute;
+		right: 22px;
+		top: -25px;
+		display: none;
+		padding: 4px 20px 4px 7px;;
+		color: #fff;
+		white-space: nowrap;
+		background: transparent url('menu-arrow.png') 100% 50% no-repeat;
 	}
-	a.prev,
-	a.next {
+	span {
+		background: url('menu-bg.png') repeat-x;
+		color: #FFF;
 		display: block;
-		width: 15px;
-		height: 11px;
-		text-indent: -9999px;
-		}
-	a.prev {
-		margin: 0 auto 5px auto;
-		background: transparent url('scroll-arrow-up.png') 0 0 no-repeat;
-		}
-		a.prev:hover {
-			background: transparent url('scroll-arrow-up.png') 0 -11px no-repeat;
-			}
-	a.next {
-		margin: 5px auto 0 auto;
-		background: transparent url('scroll-arrow-down.png') -1px 0 no-repeat;
-		}
-		a.next:hover {
-			background: transparent url('scroll-arrow-down.png') -1px -11px no-repeat;
-			}
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		border-radius: 10px;
+		padding: 4px 8px;
+		white-space: nowrap;
 
-//* Parallax
+	}
+
+}
+//* Content
 //*****************************************************************/
-
-//* content */
-.content {
-	z-index: 4;
-	position: relative;
-	max-width: 940px;
-	padding: 0 10px;
-	margin: 0 auto;
-	line-height: 1.7;
+.content{
+	article{
+		display: block;
+		height: 664px;
+		width: 100%;
 	}
-	.content article {
-		width: 300px;
-		}
-		[data-type="casa-hogar"],
-		[data-type="historia"],
-		[data-type="servicios"],
-		[data-type="mision"], [data-type="who"]{
-			padding-top: 105px;
-			}
-		[data-type="casa-hogar"] {
-			background: url('abue.png');
-			position: absolute;
-			top: 0px;
-			}
-		[data-type="historia"]{
-			position: absolute;
-			top: 1090px;
-			}
-		[data-type="mision"] {
-			position: absolute;
-			top: 2920px;
-		}
-    [data-type="who"]{
-			position: absolute;
-			top: 4010px;
-		}
-
-		[data-type="gallery"] {
-			position: absolute;
-			top: 5100px;
-			}
-		.content h1 {
-				margin: 0 0 25px 0;
-				font-size: 60px;
-				font-family: Georgia, serif;
-				font-weight: normal;
-				line-height: 65px;
-				}
-//* foreground (ballons/landscape) */
-#parallax-bg3 {
-	z-index: 3;
-	position: fixed;
-	left: 50%; //* align left edge with center of viewport */
-	top: 0;
-	width: 940px;
-	margin-left: -470px; //* move left by half element's width */
-	}
-	//* balloon */
-	#bg3-1 {
-		position: absolute;
-		top: 111px;
-		right: 0;
-		}
-	#bg3-2 {
-		position: absolute;
-		top: 812px;
-		left: 321px;
-		}
-	#bg3-3 {
-		position: absolute;
-		top: 1828px;
-		left: 403px;
-		}
-	#bg3-4 {
-		position: absolute;
-		top: 2700px;
-		left: -85px;
-		}
-	#bg3-5{
-		position: absolute;
-		top: 3772px;
-		left: -85px;
-	}
-//* midground (clouds) */
-#parallax-bg2 {
-	z-index: 2;
-	position: fixed;
-	left: 50%; //* align left edge with center of viewport */
-	top: 0;
-	width: 1200px;
-	margin-left: -600px; //* move left by half element's width */
-	}
-	#bg2-1 {
-		position: absolute;
-		top: 162px;
-		left: 200px;
-		}
-	#bg2-2 {
-		position: absolute;
-		top: 300px;
-		left: 1150px;
-		}
-	#bg2-3 {
-		position: absolute;
-		top: 543px;
-		left: -35px;
-		}
-	#bg2-4 {
-		position: absolute;
-		top: 1180px;
-		left: 250px;
-		}
-	#bg2-5 {
-		position: absolute;
-		top: 900px;
-		left: 890px;
-		}
-//* background (clouds) */
-#parallax-bg1 {
-	z-index: 1;
-	position: fixed;
-	left: 50%; //* align left edge with center of viewport */
-	top: 0;
-	width: 1200px;
-	margin-left: -600px; //* move left by half element's width */
-	}
-	#bg1-1 {
-		position: absolute;
-		top: 85px;
-		left: -270px;
-		}
-	#bg1-2 {
-		position: absolute;
-		top: 440px;
-		left: 795px;
-		}
-	#bg1-3 {
-		position: absolute;
-		top: 900px;
-		left: -220px;
-		}
-	#bg1-4 {
-		position: absolute;
-		top: 1020px;
-		left: 450px;
-		}
-
+}
+[data-type="casa-hogar"]{
+	background: url("abue.png");
+	background-position: 50% -223px; 
+}
+[data-type="historia"]{
+	background: url("prueba.png");
+	background-position: 50% -223px; 
+}

@@ -20,67 +20,21 @@
 	
   <%= csrf_meta_tags %>
 </head>
-<body class="wrapper">
+<body>
 	
 	<header class="branding">
 		<h1>Casa hogar</h1>
 	</header>
 
-	<nav class="primary">
+  <div id="mock-scroller"></div>
+	  	
+	<nav class="parallax-primary">
 		<ul>
-			<li>
-			 <h4>Casa Hogar</h4 active>
-			 <a class="casa-hogar paralax" href="#casa-hogar" data-destination= "casa-hogar">View</a>
-			</li>
-			<li>
-				<h4>Historia</h4>
-				<a class="historia paralax" href="#historia"  data-destination= "historia">View</a>
-			</li>
-			<li>
-				<h4>Misión y Visión</h4>
-				<a class="mision paralax" href="#mision"  data-destination= "mision">View</a>
-			</li>
-			<li>
-				<h4>Quienes</h4>
-				<a class="who paralax" href="#who" data-destination= "who">View</a>
-			</li>
-			<li>
-				<h4>Galeria</h4>
-				<a class="gallery paralax" href="#gallery"  data-destination= "gallery">View</a>
-			</li>
-
 		</ul>
 	</nav>
-
-	<%= yield %>
-
-
-	<!-- Parallax foreground -->
-	<div id="parallax-bg3">
-		<%= image_tag "balloon.png",  id:"bg3-1", size: "529x757",  alt: "Montgolfier hot air ballon" %>
-		<%= image_tag "balloon2.png", id:"bg3-2", size: "603x583",  alt: "Frameless parachute" %>
- 	  <%= image_tag "balloon3.png", id:"bg3-3", size: "446x713",  alt: "Blanchard's air balloon" %>
-	  <%= image_tag "ground.png",   id:"bg3-4", size: "1104x684", alt: "Landscape with trees and cows" %>
- 		<%= image_tag "ground.png",   id:"bg3-5", size: "1104x684", alt: "Landscape with trees and cows 2" %>
+	<div id="content">
+		<%= yield %>
 	</div>
-	
-	<!-- Parallax  midground clouds -->
-	<div id="parallax-bg2">
-		<%= image_tag "cloud-lg1.png", id:"bg2-1", alt:"cloud"%>
-    <%= image_tag "cloud-lg1.png", id:"bg2-2", alt:"cloud"%>
-    <%= image_tag "cloud-lg1.png", id:"bg2-3", alt:"cloud"%>
-    <%= image_tag "cloud-lg1.png", id:"bg2-4", alt:"cloud"%>
-    <%= image_tag "cloud-lg1.png", id:"bg2-5", alt:"cloud"%>
-	</div>
-	
-	<!-- Parallax  background clouds -->
-	<div id="parallax-bg1">
-    <%= image_tag "cloud-lg2.png", id:"bg1-1", alt:"cloud"%>
-    <%= image_tag "cloud-lg2.png", id:"bg1-2", alt:"cloud"%>
-    <%= image_tag "cloud-lg2.png", id:"bg1-3", alt:"cloud"%>
-    <%= image_tag "cloud-lg2.png", id:"bg1-4", alt:"cloud"%>
-	</div>
-
   <footer>
 		<p> Casa Hogar, San Gabriel Jalisco, Gavino Velasco #40</p>
 	</footer>
