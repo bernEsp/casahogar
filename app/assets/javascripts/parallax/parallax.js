@@ -459,7 +459,7 @@ $(function(){
 		if( immediate ){
 			$bodyAndHTML.scrollTop( top );
 		}else{
-			$bodyAndHTML.animate({ scrollTop: top }, 1000);
+			$bodyAndHTML.animate({ scrollTop: top }, 2000);
 		}
 	}
 
