@@ -162,6 +162,9 @@ section {
 	}
 }
 
+.bg{
+	width: 100% !important;
+}
 section .story {
 	bottom: 10%;
 	margin: 20px auto 0 auto;
@@ -175,6 +178,8 @@ section .story {
 	&.scroll{
 		overflow-y: scroll;
 	}
+
+
 	header{
 		@include single-box-shadow(rgba(0, 0, 0, 0.5), 1px, 2px, 5px);
 		background: #8ad2c6;

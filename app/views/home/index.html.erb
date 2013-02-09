@@ -1,5 +1,5 @@
 <section id="story-casahogar" data-nav="Inicio">
-	<%= image_tag "entrada.jpg",  class:"bg animate", size: "529x757",  alt: "Montgolfier hot air ballon", "anim-detached" => "true"  %>
+	<%= image_tag "entrada3.jpg",  class:"bg animate",  alt: "casa hogar", "anim-detached" => "true"  %>
 	<article class="story">
 		<header>
 			<h2>el señor de la misericordia</h2>
@@ -8,7 +8,7 @@
 	</article>
 </section>
 <section id="story-historia" data-nav="Historia">
-	<%= image_tag "patios.jpg", class:"bg animate", size: "529x757",  alt: "Montgolfier hot air ballon",  "anim-detached" => "true"   %>
+	<%= image_tag "patios2.jpg", class:"bg animate",  alt: "patio",  "anim-detached" => "true"   %>
 	<article class="story scroll">
 		<header>
 			<h2>la década de los años ochenta</h2>
@@ -32,7 +32,7 @@
 	</article>
 </section>
 <section id="story-mision" data-nav="Misión">
-	<%= image_tag "fuente.jpg",  class:"bg animate", size: "529x757",  alt: "Montgolfier hot air ballon",  "anim-detached" => "true"   %>
+	<%= image_tag "fuente2.jpg",  class:"bg animate",  alt: "fuente",  "anim-detached" => "true"   %>
 	<article class="story scroll">
 		<div class="mision">
 			<header>
@@ -72,8 +72,8 @@
 		</div>
 	</article>
 </section>
-<section id="story-who" data-nav="Quienes somos">
-	<%= image_tag "pasillos.jpg",  class:"bg animate", size: "529x757",  alt: "Montgolfier hot air ballon",  "anim-detached" => "true"  %>
+<section id="story-who" data-nav="Quiénes somos">
+	<%= image_tag "pasillos2.jpg",  class:"bg animate",  alt: "pasillos",  "anim-detached" => "true"  %>
 	<article class="story">
 		<header>
 			<h2>el comite actual</h2>
@@ -92,16 +92,19 @@
 	</article>
 </section>
 
-<section id="story-gallery" data-nav="Galeria">
+<section id="story-gallery" data-nav="Galería">
+	 <% @photo_album.photos.each do |photo| %>
+    <div class="spud_photo_album_thumbnail">
+      <%= link_to image_tag(photo.photo.url(:small), :alt => photo.caption, :title => photo.title), photo.photo.url(:large) %>
+    </div>
+  <% end %>
+
 	<article class="story">
 		<header>
 			<h2>el trabajo de todos</h2>
 		</header>
 		<p>
-			Lorem ipsu dollorem ipsu dollor ollorem ipsu dollorrsadjask dsad Lorem ipsu dollorem ipsu dollor ollorem ipsu dollorrsadjask dsad
-			Lorem ipsu dollorem ipsu dollor ollorem ipsu dollorrsadjask dsad
-			Lorem ipsu dollorem ipsu dollor ollorem ipsu dollorrsadjask dsad
-			Lorem ipsu dollorem ipsu dollor ollorem ipsu dollorrsadjask dsad
+				
 		</p>
 	</article>
 </section>

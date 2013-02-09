@@ -1,17 +1,9 @@
 class HomeController < ApplicationController
-  def vission
-  end
 
-  def mission
-  end
 
   def index
+  	@photo_album = SpudPhotoAlbum.order('created_at desc').first
   end
 
-  def services
-  end
-
-  def who
-  end
 
 end
