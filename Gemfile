@@ -14,9 +14,10 @@ gem 'sqlite3'
 gem 'jquery-rails'
 group :assets do
  # Add these gems
+ gem 'sass-rails'
  gem 'zurb-foundation'
  gem 'compass-rails'
- gem 'sass-rails'
+
  
  gem 'sprockets'
  gem 'coffee-rails'

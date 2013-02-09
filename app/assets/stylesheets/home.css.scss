@@ -4,12 +4,16 @@
 
 // Extended base styles (site specific)
 //*****************************************************************/
+@import "compass";
 
 html { 
 	overflow-y: scroll; /* always force a scrollbar in non-IE */
 }
 body {
-	background: #e3e5e5;
+	background: url('grayStripe.png');
+	background-color: rgba(0,0,0,0.6);
+
+	//opacity: 0.6;
 	overflow-x: hidden;
 	height: 4550px;
 	line-height: 1.5;
@@ -142,12 +146,67 @@ section {
 	visibility : hidden;
 }
 
+.title{
+	@include border-radius(5px);
+	background: #fbf9fa;
+	height: 200px;
+	left: 10%;
+	line-height: 6rem;
+	position: absolute;
+	top: 40%;
+	width: 400px;
+	
+	h1{
+		color: #000;
+		font-weight: black;
+	}
+}
+
 section .story {
-	position      : relative;
-	z-index       : 1;
-	width         : 500px;
-	padding-right : 450px;
-	margin        : 20px auto 0 auto;
+	bottom: 10%;
+	margin: 20px auto 0 auto;
+	height: 200px;
+	overflow-y: hidden;
+	position: absolute;
+	left: 54%;
+	
+	width: 500px;
+	z-index: 1;
+	&.scroll{
+		overflow-y: scroll;
+	}
+	header{
+		@include single-box-shadow(rgba(0, 0, 0, 0.5), 1px, 2px, 5px);
+		background: #8ad2c6;
+		float: left;
+		padding: 0.4rem 2rem 1rem 2rem;
+		height: 5rem;
+		margin-bottom: 0;
+		&:after{
+			clear: both;
+		}
+	}
+	h2{
+		color: #fafafa;
+		font-size: 20px;
+		font-weight: bolder;
+		line-height: 36px;
+		padding: 0;
+		margin: 0;
+	}
+	p, ul{
+		@include single-box-shadow(rgba(0, 0, 0, 0.5), 1px, 1.4px, 5px);
+		background: #fafafc;
+		clear: both;
+		font-size: 13px;
+		font-weight: 400;
+		height: auto;
+		line-height: 21px;
+		margin-bottom: 0;
+		padding: 2rem 5rem;
+		text-rendering: optimizeLegibility;
+
+	}
 }
 
 div.caption {
@@ -268,6 +327,8 @@ hr {
 .branding {
 	width: 100%;
 	background: #fff;
+	position: fixed;
+	z-index: 100;
 }
 
 .branding h1 {
