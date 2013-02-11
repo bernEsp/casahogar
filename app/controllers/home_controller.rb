@@ -1,9 +1,10 @@
 class HomeController < ApplicationController
 
 
-  def index
-  	@photo_album = SpudPhotoAlbum.order('created_at desc').first
-  end
+	def index
+  	@albums = SpudPhotoAlbum.order('created_at desc')
+		@photos = @albums.first.photos
+ 	end
 
 
 end

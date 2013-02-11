@@ -1,0 +1,1 @@
+$("#photos").html("<%= escape_javascript(render(:partial => 'home/photo', collection: @photo_album.photos || "No hay fotos para mostrar.", as: :photo)) %>");

@@ -12,4 +12,3 @@
 //= require parallax/kinectics
 //= require parallax/backgrounds
 //= require parallax/parallax
-
