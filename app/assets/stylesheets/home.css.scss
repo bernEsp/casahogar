@@ -347,12 +347,21 @@ hr {
 }
 
 .branding h1 {
+	display: inline-block;
 	font-size: 24px;
 	font-weight: bold;
-	margin: 0 auto;
-	padding: 10px 15px;
+	padding: 0 8.0rem;
 	text-transform: uppercase;
-	width: 940px;
+}
+
+.branding h5{
+	color: #222;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: 500;
+	position: absolute;
+	right: 4rem;
+
 }
 
 //* Nav
@@ -420,3 +429,23 @@ hr {
 	background: url("prueba.png");
 	background-position: 50% -223px; 
 }
+.arrow{
+	@include scale(1.8, 1.4);
+	background: url("scroll-arrow-down.png");
+	bottom: 0;
+  height: 15px;
+	left: 48%;
+	position: absolute;
+	width: 15px;
+}
+.donate-button{
+  position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 10000;
+}
+footer{
+	color: #fafafa;
+	padding: 0 15rem;
+}
+
