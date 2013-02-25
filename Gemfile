@@ -17,8 +17,8 @@ gem 'spud_photos'
 group :assets do
  # Add these gems
  gem 'sass-rails'
- gem 'zurb-foundation'
  gem 'compass-rails'
+ gem 'zurb-foundation'
 
  
  gem 'sprockets'
