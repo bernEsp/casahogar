@@ -6,9 +6,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation
 //= require parallax/html5
 //= require parallax/side-nav
 //= require parallax/kinectics
 //= require parallax/backgrounds
 //= require parallax/parallax
-//= require foundation
+
