@@ -12,6 +12,10 @@ gem 'rails','~> 3.2.5'
 gem 'jquery-rails'
 
 gem 'spud_photos', :git => 'git://github.com/bernardogalindo/spud_photos.git'
+
+#upload photos s3
+gem 'paperclip'
+gem 'aws-sdk'
 group :assets do
  # Add these gems
  gem 'zurb-foundation'
