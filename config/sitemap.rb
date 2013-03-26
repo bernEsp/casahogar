@@ -1,5 +1,5 @@
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.default_host = "http://www.senordelamisericordia.com"
+SitemapGenerator::Sitemap.default_host = "http://www.senordelamisericordia.org"
 SitemapGenerator::Sitemap.sitemaps_host = "http://casa-hogar.s3.amazonaws.com/"
 SitemapGenerator::Sitemap.public_path = 'tmp/'
 SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
